@@ -4,9 +4,9 @@
 
 ## Introduction
 
-Hospitals worldwide face the continual challenge of managing infectious disease outbreaks, which pose significant risks to patients and staff alike. To address this challenge, this project aims to leverage machine learning techniques to develop early detection procedures for viral infections, enabling hospitals to implement timely and targeted contingency measures.
+Infectious disease outbreaks represent an ongoing concern for hospitals worldwide, posing significant risks to both patients and staff members. Addressing this challenge requires the development of robust early detection procedures to swiftly identify and mitigate potential viral infections. In this project, I aim to harness the power of machine learning to create predictive models tailored to the specific needs of hospitals, particularly focusing on the case study of the Lechi hospital's recent viral epidemic.
 
-The primary objective is to build a binary classification model capable of accurately differentiating between infected and non-infected individuals based on demographic and clinical attributes. By doing so, we aim to provide hospitals with a valuable tool for early detection and intervention, thereby minimizing the spread of infectious diseases and optimizing patient care outcomes.
+The primary objective of this project is to construct a binary classification model capable of accurately discerning between infected and non-infected individuals. By analyzing a diverse array of demographic and clinical attributes, my model seeks to provide hospitals with a valuable tool for preemptive intervention, enabling timely implementation of targeted contingency measures.
 
 ### Dataset Description
 
