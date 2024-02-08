@@ -108,9 +108,11 @@ When performing PCA, it's essential to fit the PCA transformation only on the tr
 
 Additionally, it's generally recommended to perform PCA on the scaled training dataset rather than the unscaled dataset. Scaling the data before PCA can lead to more meaningful and interpretable results, as it ensures that all features contribute equally to the principal components.
 
-After performing PCA, it's common to visualize the explained variance ratio for each principal component. This provides insights into the amount of variance captured by each component. Additionally, plotting the cumulative explained variance ratio helps determine the number of principal components needed to retain a certain percentage of the total variance.
+After performing PCA, it's common to visualize the explained variance ratio for each principal component. This provides insights into the amount of variance captured by each component:
 
 ![Explained variance](images/pca.png)
+
+Additionally, plotting the cumulative explained variance ratio helps determine the number of principal components needed to retain a certain percentage of the total variance:
 
 ![Cumulative explained variance](images/pcac.png)
 
@@ -118,8 +120,69 @@ The plots illustrate that there is no distinct "elbow" in the cumulative explain
 
 ## Model training and Evaluation
 
+- **Multiple model training**: Training multiple models allows us to explore different algorithms and assess their performance on our dataset. Each model may have different strengths and weaknesses, and by training a variety of models, we can gain insights into which algorithms are best suited for our specific problem.
+- **Hyperparameter tuning with grid search**: Grid search is a technique used to find the optimal hyperparameters for a machine learning model. It involves specifying a grid of hyperparameter values and exhaustively searching through all possible combinations to identify the set of hyperparameters that results in the best model performance. We utilized grid search with various hyperparameters for each model to fine-tune their configurations and improve their predictive accuracy.
+- **Cross-Validation**: Cross-validation is a resampling technique used to evaluate machine learning models while maximizing data utilization. In grid search, cross-validation is employed to assess the performance of each hyperparameter combination by splitting the training data into multiple subsets (folds), training the model on each fold, and then averaging the results. This helps prevent overfitting and provides a more robust estimation of the model's performance.
+- **Model evaluation metrics**: To evaluate the performance of each trained model, we used precision, recall, F1 score, and accuracy metrics. These metrics provide insights into the model's ability to correctly classify instances of different classes, considering both true positive and false positive rates. Precision measures the proportion of true positive predictions among all positive predictions, while recall measures the proportion of true positive predictions among all actual positive instances. F1 score is the harmonic mean of precision and recall, providing a balanced evaluation metric. Accuracy measures the overall correctness of the model's predictions.
+- **Visualizations for evaluation**:In addition to numerical metrics, we employed visualizations to aid in the evaluation of model performance. For example, we plotted the mean F1 score against different hyperparameter values to observe how model performance varies with parameter settings:
+
+![mean F1 Score vs K](images/k.png)
+
+We also visualized the confusion matrix to gain insights into the model's classification performance across different classes:
+
+![confusion matrix](images/cm.png)
+
+Furthermore, we utilized ROC curves to assess the trade-off between true positive rate and false positive rate, providing a comprehensive understanding of the model's discriminative ability across different thresholds.
+
+![Receiver operating characteristic curve](images/roc.png)
+
+With an AUC of 0.88, the model seems to perform relatively well, indicating a strong ability to distinguish between positive and negative instances. The high AUC value suggests that the model has a good balance between true positive rate and false positive rate, making it effective for classification tasks. However, further analysis of precision, recall, and F1 score is necessary to comprehensively assess the model's performance across different evaluation metrics and ensure its suitability for the specific task at hand.
+
 ## Conclusion
+
+The comparison of classification metrics across different models reveals that all models exhibit similar performance across precision, recall, F1 score, and accuracy metrics. Despite employing a variety of machine learning algorithms, including Decision Tree, KNN, Logistic Regression, MLP Perceptron, Naive Bayes, and SVM, the resulting models demonstrate comparable effectiveness in classifying instances.
+
+This consistency in performance suggests that the choice of model may not significantly impact the overall predictive capability in this particular context. It implies that the dataset's characteristics and inherent patterns may be well-suited for a wide range of classification algorithms, leading to consistent results across various models.
+
+While the models' overall performance is promising, further analysis and domain-specific considerations may be necessary to determine the most appropriate model for deployment in real-world scenarios. Additionally, model interpretability, computational efficiency, and scalability considerations may influence the final selection of the optimal model for practical implementation.
+
+The following plot provides an overview of the performance of models developed:
+
+![classification performance](images/performance.png)
+
+In summary, the findings suggest that while the choice of model may not be critical in this case, thorough evaluation and consideration of various factors are essential to ensure the chosen model aligns with the specific requirements and objectives of the application.
+
+Moreover, the developed model holds significant utility in addressing the initial problem statement of predicting potential cases of viral infection in hospitals. By leveraging machine learning techniques to detect infections early, hospitals can implement timely and targeted contingency measures, thereby minimizing the spread of infectious diseases and optimizing patient care outcomes. This model serves as a valuable tool for enhancing hospitals' preparedness and response capabilities in the face of infectious disease outbreaks, ultimately contributing to improved public health outcomes.
 
 ## Tools and technologies
 
+- Python programming language
+- Pandas for data manipulation and analysis
+- NumPy for numerical operations and array processing
+- Category Encoders for categorical variable encoding
+- Matplotlib for data visualization, including plotting graphs and charts
+- Seaborn for statistical data visualization, enhancing Matplotlib plots
+- Scikit-learn (sklearn) for machine learning tasks, including model training, evaluation, and hyperparameter tuning
+- StandardScaler and MinMaxScaler for feature scaling
+- PCA (Principal Component Analysis) for dimensionality reduction
+- Various classification algorithms from sklearn, including DecisionTreeClassifier, KNeighborsClassifier, LogisticRegression, MLPClassifier, GaussianNB, and SVC
+- Metrics and Confusion Matrix modules from sklearn for model evaluation, including precision, recall, F1 score, accuracy, and confusion matrix model's discriminative ability through Receiver Operating Characteristic (ROC) analysis.
+
 ## Remarks and instructions for usage
+
+**1. Data Origin:**
+- The data used in this project was provided by a kind professor.
+
+**2. Setup:**
+- Make sure you have the necessary packages installed in your Python environment. Refer to the "Tools and Technologies" section for a list of required libraries.
+
+**3. Data Usage:**
+- The data used for model training was the scaled data. Feel free to use the unscaled data or the PCA components provided in the notebook to see how they may change the results.
+- All variables were used for developing the models as they all showed some sort of relationship with the target variable (small or big). Feel free to use the notebook to train the models using only a subset of variables to see how it affects performance. Consider factors such as generalizability, model simplicity, efficiency, and speed when selecting variables for model training.
+
+**4.Additional Remarks:**
+- Experimentation with different preprocessing techniques, feature engineering methods, or model architectures may yield further insights and improvements in model performance. If you are interested in this project, don't hesitate to explore alternative approaches and iterate on the provided notebook to enhance the project's outcomes.
+- Consider conducting sensitivity analyses to assess the robustness of the models to variations in hyperparameters, input data, or modeling assumptions. This can provide valuable insights into the models' stability and reliability in different scenarios.
+
+**5. Contact:**
+- If you have any questions or comments, feel free to contact me on [LinkedIn](https://www.linkedin.com/in/hamidrezarahimi/)
