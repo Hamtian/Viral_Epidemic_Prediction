@@ -180,8 +180,8 @@ Moreover, the developed model holds significant utility in addressing the initia
 - The data used for model training was the scaled data. Feel free to use the unscaled data or the PCA components provided in the notebook to see how they may change the results.
 - All the explanatory variables were used during model training as they all showed some sort of relationship with the target variable (some more significant than others). Feel free to use the notebook to train the models using only a subset of variables to see how it affects performance. Consider factors such as generalizability, model simplicity, efficiency, and speed when selecting variables for model training.
 
-**4.Additional Remarks:**
-- Experimentation with different preprocessing techniques, feature engineering methods, or model architectures may yield further insights and improvements in model performance. If you are interested in this project, don't hesitate to explore alternative approaches and iterate on the provided notebook to enhance the project's outcomes.
+**4. Additional Remarks:**
+- Experimentation with different preprocessing techniques and feature engineering methods may yield further insights and improvements in model performance. If you are interested in this project, feel free to explore alternative approaches and iterate on the provided notebook to enhance the project's outcomes.
 - Consider conducting sensitivity analyses to assess the robustness of the models to variations in hyperparameters, input data, or modeling assumptions. This can provide valuable insights into the models' stability and reliability in different scenarios.
 
 **5. Contact:**
