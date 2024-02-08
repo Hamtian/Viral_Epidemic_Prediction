@@ -124,15 +124,15 @@ The plots illustrate that there is no distinct "elbow" in the cumulative explain
 - **Hyperparameter tuning with grid search**: Grid search is a technique used to find the optimal hyperparameters for a machine learning model. It involves specifying a grid of hyperparameter values and exhaustively searching through all possible combinations to identify the set of hyperparameters that results in the best model performance. I utilized grid search with various hyperparameters for each model to fine-tune their configurations and improve their predictive accuracy.
 - **Cross-Validation**: Cross-validation is a resampling technique used to evaluate machine learning models while maximizing data utilization. In grid search, cross-validation is employed to assess the performance of each hyperparameter combination by splitting the training data into multiple subsets (folds), training the model on each fold, and then averaging the results. This helps prevent overfitting and provides a more robust estimation of the model's performance.
 - **Model evaluation metrics**: To evaluate the performance of each trained model, I used precision, recall, F1-score, and accuracy metrics. These metrics provide insights into the model's ability to correctly classify instances of different classes, considering both true positive and false positive rates. Precision measures the proportion of true positive predictions among all positive predictions, while recall measures the proportion of true positive predictions among all actual positive instances. F1 score is the harmonic mean of precision and recall, providing a balanced evaluation metric. Accuracy measures the overall correctness of the model's predictions.
-- **Visualizations for evaluation**:In addition to numerical metrics, we employed visualizations to aid in the evaluation of model performance. For example, we plotted the mean F1 score against different hyperparameter values to observe how model performance varies with parameter settings:
+- **Visualizations for evaluation**:In addition to numerical metrics, I employed visualizations to aid in the evaluation of model performance. For example, I plotted the mean F1 score against different hyperparameter values to observe how model performance varies with parameter settings:
 
 ![mean F1 Score vs K](images/k.png)
 
-We also visualized the confusion matrix to gain insights into the model's classification performance across different classes:
+I also visualized the confusion matrix to gain insights into the model's classification performance across different classes:
 
 ![confusion matrix](images/cm.png)
 
-Furthermore, we utilized ROC curves to assess the trade-off between true positive rate and false positive rate, providing a comprehensive understanding of the model's discriminative ability across different thresholds.
+Furthermore, I utilized ROC curves to assess the trade-off between true positive rate and false positive rate, providing a comprehensive understanding of the model's discriminative ability across different thresholds.
 
 ![Receiver operating characteristic curve](images/roc.png)
 
