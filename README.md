@@ -166,7 +166,7 @@ Moreover, the developed model holds significant utility in addressing the initia
 - StandardScaler and MinMaxScaler for feature scaling
 - PCA (Principal Component Analysis) for dimensionality reduction
 - Various classification algorithms from sklearn, including DecisionTreeClassifier, KNeighborsClassifier, LogisticRegression, MLPClassifier, GaussianNB, and SVC
-- Metrics and Confusion Matrix modules from sklearn for model evaluation, including precision, recall, F1 score, accuracy, and confusion matrix model's discriminative ability through Receiver Operating Characteristic (ROC) analysis.
+- Metrics and Confusion Matrix modules from sklearn for model evaluation, including precision, recall, F1 score, accuracy, and confusion matrix
 
 ## Remarks and instructions for usage
 
