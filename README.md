@@ -185,4 +185,4 @@ Moreover, the developed model holds significant utility in addressing the initia
 - Consider conducting sensitivity analyses to assess the robustness of the models to variations in hyperparameters, input data, or modeling assumptions. This can provide valuable insights into the models' stability and reliability in different scenarios.
 
 **5. Contact:**
-- If you have any questions or comments, feel free to contact me on [LinkedIn](https://www.linkedin.com/in/hamidrezarahimi/)
+- For any inquiries, collaboration opportunities, or feedback, please don't hesitate to connect with me on [LinkedIn](https://www.linkedin.com/in/hamidrezarahimi/). Your insights are highly valued and appreciated.
